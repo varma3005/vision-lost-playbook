@@ -1,0 +1,1 @@
+import {Composition} from 'remotion'; import {IncidentFilm} from './scenes/IncidentFilm'; export const RemotionRoot=()=> <Composition id="incident-film" component={IncidentFilm} durationInFrames={1800} fps={30} width={1920} height={1080}/>;
