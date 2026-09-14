@@ -47,6 +47,30 @@ const signals = [
 ];
 
 const capabilities = ["Detect", "Observe", "Investigate", "Respond", "Automate", "Innovate"];
+const team = [
+  { name: "Sumanth Middy", role: "Senior Lead SRE", quip: "Keeps production calm—even when Slack is not." },
+  { name: "B Vaishnavi Varma", role: "Agentic AI", quip: "Gets her hands dirty so the agents can think cleanly." },
+  { name: "Rishika Juppaly", role: "Splunk", quip: "Can find the one useful log in a million noisy ones." },
+  { name: "Sarah", role: "Product Owner", quip: "Turns incident chaos into a suspiciously tidy roadmap." },
+  { name: "Jai Gugan", role: "OpenTelemetry", quip: "Makes traces travel farther than most holiday plans." },
+  { name: "Balaji Raju Mohan", role: "New Relic", quip: "Sees the memory spike before the container feels it." },
+  { name: "Mani", role: "Splunk + AI", quip: "Asks the logs smarter questions—and expects answers." },
+  { name: "Sharon", role: "JE", quip: "Fresh eyes, sharp questions, zero fear of red dashboards." },
+  { name: "Simon", role: "Observability Crew", quip: "Quietly connects dots while everyone else refreshes." },
+  { name: "Richard", role: "Observability Crew", quip: "Brings context to the call before the panic joins." },
+  { name: "Elyse", role: "Observability Crew", quip: "Makes mysterious signals considerably less mysterious." },
+  { name: "Alyssa", role: "Observability Crew", quip: "Treats every alert like a clue, not a jump scare." },
+  { name: "Lipi", role: "Observability Crew", quip: "Keeps a cool head and a very warm telemetry stream." },
+  { name: "Lalita", role: "Observability Crew", quip: "Spots the pattern hiding between two noisy graphs." },
+  { name: "Bikash Mishra", role: "Observability Crew", quip: "Asks “what changed?” before anyone blames the network." },
+  { name: "Sathish Rangan", role: "Observability Crew", quip: "Can translate dashboard red into an actual next step." },
+  { name: "Santhosh Varma", role: "Observability Crew", quip: "Turns production mysteries into short-lived mysteries." },
+  { name: "Dinesh", role: "Observability Crew", quip: "Checks the evidence before touching the restart button." },
+  { name: "Joe Chandrapala", role: "Observability Crew", quip: "Keeps incidents moving and the guessing to a minimum." },
+  { name: "Thuy", role: "Observability Crew", quip: "Finds signal in the noise—and occasionally in the silence." },
+  { name: "Aniruddh", role: "Observability Crew", quip: "Follows the trace until the root cause runs out of places to hide." },
+  { name: "Hareesh", role: "Observability Crew", quip: "Makes sure “probably fine” comes with supporting evidence." },
+];
 const metrics = [
   "Services / applications monitored",
   "Incidents detected & supported",
@@ -213,7 +237,24 @@ function Index() {
         <h2>MEET THE HUMANS<br />BEHIND THE DASHBOARDS.</h2>
         <p>Not avatars. Not alert-routing rules. Twenty-two actual humans keeping the lights on.</p>
         <Button onClick={() => setTeamOpen((v) => !v)}><Users /> {teamOpen ? "Close team console" : "Open team console"}</Button>
-        {teamOpen && <div className="team-console"><div className="team-orbit"><Eye /></div><div><b>22 PEOPLE</b><p>{capabilities.join(" · ")}</p><small>Individual profiles ready when team details are supplied.</small></div></div>}
+        {teamOpen && (
+          <div className="team-console">
+            <div className="team-console-head">
+              <div className="team-orbit"><Eye /></div>
+              <div><b>22 PEOPLE</b><p>{capabilities.join(" · ")}</p><small>PRODUCTION VISIBILITY CREW / ALL SIGNALS ONLINE</small></div>
+            </div>
+            <div className="team-roster">
+              {team.map((person, index) => (
+                <article className="team-member" key={person.name}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{person.name}</h3>
+                  <b>{person.role}</b>
+                  <p>{person.quip}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
 
       <section id="impact" className="impact-section section-grid">
