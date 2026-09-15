@@ -49,28 +49,28 @@ const signals = [
 const capabilities = ["Detect", "Observe", "Investigate", "Respond", "Automate", "Innovate"];
 
 const team = [
-{ name: "Sumanth Middy", role: "Senior Lead SRE", power: "Keeps production calm—even when Slack is not.", boss: "“who deployed on Friday?”" },
-{ name: "B Vaishnavi Varma", role: "Agentic AI", power: "Gets her hands dirty so the agents can think cleanly.", boss: "“can we automate this?”" },
-{ name: "Rishika Jupally", role: "Site Reliability Engineer", power: "Can find the one useful log in a million noisy ones.", boss: "“it's in the logs somewhere”" },
+{ name: "Sumanth", role: "Senior Lead SRE", power: "Keeps production calm—even when Slack is not.", boss: "“who deployed on Friday?”" },
+{ name: "Bikash", role: "Observability Crew", power: "Asks “what changed?” before anyone blames the network.", boss: "“it's never DNS (it's DNS)”" },
 { name: "Sarah", role: "Product Owner", power: "Turns incident chaos into a suspiciously tidy roadmap.", boss: "“is this a P1 or a vibe?”" },
-{ name: "Jai Gugan Bujanganur Thangavelsamy", role: "SRE Scaled Engineer", power: "Makes traces travel farther than most holiday plans.", boss: "“where does this span go?”" },
-{ name: "Balaji Raju Mohan", role: "SRE Engineer", power: "Sees the memory spike before the container feels it.", boss: "“that graph is climbing…”" },
+{ name: "B Vaishnavi", role: "Agentic AI", power: "Gets her hands dirty so the agents can think cleanly.", boss: "“can we automate this?”" },
 { name: "Mani", role: "Splunk + AI", power: "Asks the logs smarter questions—and expects answers.", boss: "“ask the logs nicely”" },
+{ name: "Sathish", role: "Observability Crew", power: "Can translate dashboard red into an actual next step.", boss: "“ok but what do we DO”" },
+{ name: "Dinesh", role: "Observability Crew", power: "Checks the evidence before touching the restart button.", boss: "“did we try restarting it”" },
+{ name: "Jai", role: "SRE Scaled Engineer", power: "Makes traces travel farther than most holiday plans.", boss: "“where does this span go?”" },
+{ name: "Rishika", role: "Site Reliability Engineer", power: "Can find the one useful log in a million noisy ones.", boss: "“it's in the logs somewhere”" },
+{ name: "Balaji", role: "SRE Engineer", power: "Sees the memory spike before the container feels it.", boss: "“that graph is climbing…”" },
 { name: "Sharon", role: "Journey Expert", power: "Fresh eyes, sharp questions, zero fear of red dashboards.", boss: "“wait, why is that red?”" },
 { name: "Simon", role: "Observability Crew", power: "Quietly connects dots while everyone else refreshes.", boss: "“stop refreshing, look here”" },
 { name: "Richard", role: "Observability Crew", power: "Brings context to the call before the panic joins.", boss: "“let's not panic yet”" },
-{ name: "Elyse Nguyen", role: "Site Reliability Engineer", power: "Makes mysterious signals considerably less mysterious.", boss: "“the mystery signal”" },
-{ name: "Alyssa Kirsty Chin", role: "SRE Engineer", power: "Treats every alert like a clue, not a jump scare.", boss: "“3am pager duty”" },
-{ name: "Lipismita Sahoo", role: "Quality Engineer", power: "Keeps a cool head and a very warm telemetry stream.", boss: "“stay calm, read the trace”" },
-{ name: "Lalita Singh", role: "Site Reliability Engineer", power: "Spots the pattern hiding between two noisy graphs.", boss: "“the noisy neighbor graph”" },
-{ name: "Bikash Mishra", role: "Observability Crew", power: "Asks “what changed?” before anyone blames the network.", boss: "“it's never DNS (it's DNS)”" },
-{ name: "Sathish Rangan", role: "Observability Crew", power: "Can translate dashboard red into an actual next step.", boss: "“ok but what do we DO”" },
-{ name: "Santhosh Varma Chakravarthula", role: "Software Engineer", power: "Turns production mysteries into short-lived mysteries.", boss: "“the unexplained 500s”" },
-{ name: "Dinesh", role: "Observability Crew", power: "Checks the evidence before touching the restart button.", boss: "“did we try restarting it”" },
-{ name: "Joe Chandrapala", role: "Observability Crew", power: "Keeps incidents moving and the guessing to a minimum.", boss: "“keep the bridge moving”" },
-{ name: "Thuy Tran", role: "Journey Expert", power: "Finds signal in the noise—and occasionally in the silence.", boss: "“the suspicious silence”" },
-{ name: "Aniruddh Panvalkar", role: "Platform Engineer", power: "Follows the trace until the root cause runs out of places to hide.", boss: "“the shy root cause”" },
-{ name: "Hareesh Mudduluru", role: "Site Reliability Engineer", power: "Makes sure “probably fine” comes with supporting evidence.", boss: "“is it *actually* fine?”" },
+{ name: "Elyse", role: "Site Reliability Engineer", power: "Makes mysterious signals considerably less mysterious.", boss: "“the mystery signal”" },
+{ name: "Alyssa", role: "SRE Engineer", power: "Treats every alert like a clue, not a jump scare.", boss: "“3am pager duty”" },
+{ name: "Lipismita", role: "Quality Engineer", power: "Keeps a cool head and a very warm telemetry stream.", boss: "“stay calm, read the trace”" },
+{ name: "Lalita", role: "Site Reliability Engineer", power: "Spots the pattern hiding between two noisy graphs.", boss: "“the noisy neighbor graph”" },
+{ name: "Santhosh", role: "Software Engineer", power: "Turns production mysteries into short-lived mysteries.", boss: "“the unexplained 500s”" },
+{ name: "Joe", role: "Observability Crew", power: "Keeps incidents moving and the guessing to a minimum.", boss: "“keep the bridge moving”" },
+{ name: "Thuy", role: "Journey Expert", power: "Finds signal in the noise—and occasionally in the silence.", boss: "“the suspicious silence”" },
+{ name: "Aniruddh", role: "Platform Engineer", power: "Follows the trace until the root cause runs out of places to hide.", boss: "“the shy root cause”" },
+{ name: "Hareesh", role: "Site Reliability Engineer", power: "Makes sure “probably fine” comes with supporting evidence.", boss: "“is it *actually* fine?”" },
 ];
 
 const initials = (name: string) =>
@@ -189,7 +189,7 @@ return (
 <div><dt>Incident</dt><dd>Production service degradation</dd></div>
 <div><dt>Status</dt><dd>Investigating (frantically)</dd></div>
 <div><dt>Telemetry</dt><dd>Logs · Metrics · Traces</dd></div>
-<div><dt>Tools</dt><dd>Splunk + New Relic</dd></div>
+<div><dt>Tools</dt><dd>Splunk + New Relic + Dynatrace</dd></div>
 <div><dt>Severity</dt><dd>High</dd></div>
 <div><dt>Customer impact</dt><dd>Being assessed 🫠</dd></div>
 </dl>
@@ -236,17 +236,6 @@ aria-label="Engineering incident film"
 <article><Zap /><span>WE AUTOMATE ⚙️</span><h3>We don't like doing things twice.</h3><p>if a human clicks the same 17 screens every time, a machine should probably be doing that. respectfully.</p></article>
 </section>
 
-<section id="ai" className="ai-section section-grid">
-<div className="section-kicker">03 / AGENTIC OBSERVABILITY</div>
-<h2>Okay, but what if<br />Observability could <em>think?</em> 🤯</h2>
-<div className="agent-flow">
-{[{ icon: AlertTriangle, label: "ALERT" }, { icon: Bot, label: "AGENT" }, { icon: Eye, label: "LOOKS" }, { icon: Network, label: "CONNECTS" }, { icon: Zap, label: "ACTS" }].map(({ icon: Icon, label }, i) => (
-<div className="agent-node" key={label}><span>0{i + 1}</span><Icon /><b>{label}</b></div>
-))}
-</div>
-<div className="comparison"><p><span>Traditional monitoring</span>“Something is wrong.” 🤷</p><p><span>Agentic observability</span>“Here's what happened, why it happened, and what you can do next.” 🧠✨</p></div>
-</section>
-
 <section className="game-section section-grid">
 <div className="section-kicker">04 / INCIDENT DRILL</div>
 <h2>CAN YOU SURVIVE WITHOUT OBSERVABILITY?</h2>
@@ -259,7 +248,7 @@ aria-label="Engineering incident film"
 {gameChoice && (
 <div className={`game-result ${gameChoice === "Check Splunk telemetry" ? "correct" : "wrong"}`}>
 {gameChoice === "Check Splunk telemetry"
-? "YOU FOUND IT. 🟢 see? you already need us. this is why we can't have nice weekends."
+? "YOU FOUND IT...ONE SIGNAL CAN CHANGE EVERYTHING."
 : gameChoice === "Blame DNS"
 ? "❌ it's always DNS... except this time it wasn't. congrats, the incident is now worse."
 : "❌ NOPE. congratulations, you've officially made the incident worse. touch grass, then check telemetry."}
@@ -269,7 +258,7 @@ aria-label="Engineering incident film"
 
 <section id="team" className="team-section section-grid">
 <div className="section-kicker">05 / THE HUMANS</div>
-<h2>THE PEOPLE WHO GET BLAMED<br />WHEN THE DASHBOARD TURNS RED.</h2>
+<h2>THE TEAM BEHIND THE SCENES<br />WHEN THE DASHBOARD TURNS RED.</h2>
 <p>Not avatars. Not alert-routing rules. Twenty-two actual humans keeping the lights on (and the graphs green).</p>
 <Button onClick={() => setTeamOpen((v) => !v)}><Users /> {teamOpen ? "Close team console" : "Open team console"}</Button>
 {teamOpen && (
@@ -304,7 +293,7 @@ aria-label="Engineering incident film"
 <div className="blackout" onClick={() => setBlind(false)} role="button" tabIndex={0}>
 <p>yeah.</p><p>we'd rather not.</p>
 <h2><Eye /> YOU ONLY NOTICE US WHEN WE'RE GONE.</h2>
-<small>{panicClicks > 1 ? "you keep turning us off. this says a lot about you." : "click anywhere to restore visibility."}</small>
+<small>{panicClicks > 1 ? "Visibility shouldn't be optional." : "Click anywhere to restore visibility."}</small>
 </div>
 )}
 </section>
